@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=66.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "legerbeep"
+version = "0.1.dev0"
+authors = [
+  { name="Léo Flaventin Hauchecorne", email="hl037.prog@gmail.com" },
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+license= {text = "GPLv3"}
+dynamic = ["dependencies"]
+
+[project.urls]
+#"Homepage" = "https://leo-flaventin.com"
+#"Bug Tracker" = ""
+
+[project.scripts]
+legerbeep = "legerbeep.cli:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
